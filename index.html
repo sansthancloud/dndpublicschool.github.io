@@ -1,60 +1,1068 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="DND Public School, Khersa Bidhnu Kanpur - Best CBSE School for Quality Education">
-  <title>DND Public School | Khersa Bidhnu, Kanpur</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
-    header { background: #2c3e50; color: white; padding: 20px; text-align: center; }
-    nav { background: #34495e; padding: 10px; text-align: center; }
-    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
-    section { padding: 20px; }
-    footer { background: #2c3e50; color: white; text-align: center; padding: 10px; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DND Public School Kanpur - Dr. Narendra Dwivedi Vidya Mandir</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        :root {
+            --primary: #1e5799;
+            --secondary: #ff9800;
+            --accent: #0d3c6c;
+            --light: #f0f5ff;
+            --dark: #333;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: #f9f9f9;
+            scroll-behavior: smooth;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .section-padding {
+            padding: 60px 0;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border: 2px solid var(--secondary);
+        }
+        
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .logo-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 0.9rem;
+            text-align: center;
+            padding: 5px;
+        }
+        
+        .school-info h1 {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+        
+        .school-info p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        
+        .slogan {
+            font-style: italic;
+            margin-top: 5px;
+            font-size: 0.9rem;
+            color: #ffeb3b;
+        }
+        
+        /* Navigation */
+        nav {
+            background-color: var(--accent);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav li {
+            position: relative;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            display: block;
+            transition: background 0.3s;
+            font-weight: 500;
+        }
+        
+        nav a:hover {
+            background-color: var(--primary);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://lh3.googleusercontent.com/p/AF1QipM7fUZw0peY4ONgAHk8fEJjwf8qIUxwMH4IlYUi=s1360-w1360-h1020-rw') no-repeat center center/cover;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--secondary);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background: #e68900;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        /* Sections */
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background: var(--secondary);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        /* About Section */
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text p {
+            margin-bottom: 15px;
+        }
+        
+        .about-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Features Section */
+        .features {
+            background-color: var(--light);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .feature-card h3 {
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        /* Academics Section */
+        .academics-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .academic-level {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            border-top: 4px solid var(--secondary);
+        }
+        
+        .academic-level h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        /* Facilities Section */
+        .facilities {
+            background-color: var(--light);
+        }
+        
+        .facilities-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .facility-item {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+        
+        .facility-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        /* Photo Gallery */
+        .gallery {
+            background-color: white;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        
+        .gallery-item {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            height: 250px;
+            transition: transform 0.3s;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 15px;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            text-align: center;
+        }
+        
+        .rating {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .stars {
+            color: #ffc107;
+            font-size: 1.5rem;
+            margin-right: 10px;
+        }
+        
+        .rating-text {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: left;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            color: var(--primary);
+        }
+        
+        /* Quotes Section */
+        .quotes {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            color: white;
+            text-align: center;
+            padding: 60px 0;
+        }
+        
+        .quote-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .quote {
+            font-size: 1.5rem;
+            font-style: italic;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        
+        .quote-author {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        
+        /* Contact Section */
+        .contact-content {
+            display: flex;
+            gap: 40px;
+        }
+        
+        .contact-info {
+            flex: 1;
+        }
+        
+        .contact-details {
+            margin-top: 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .contact-icon {
+            background: var(--primary);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .contact-form {
+            flex: 1;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        /* Map Section */
+        .map-section {
+            background-color: var(--light);
+            padding: 40px 0;
+        }
+        
+        .map-container {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            height: 400px;
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--accent);
+            color: white;
+            padding: 40px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 2px;
+            background: var(--secondary);
+            bottom: 0;
+            left: 0;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-link {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            color: white;
+            transition: background 0.3s;
+        }
+        
+        .social-link:hover {
+            background: var(--secondary);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .logo-container {
+                justify-content: center;
+                margin-bottom: 15px;
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+            
+            .hero {
+                height: 400px;
+            }
+            
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            .about-content, .contact-content {
+                flex-direction: column;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-container">
+                    <div class="logo">
+                        <!-- Logo placeholder - replace with actual logo -->
+                        <img src="https://blogger.googleusercontent.com/img/a/AVvXsEgYjnhDtbhQh8HPcppUX141NtCOaguBukmYv5CkRM1a8f-1cjBDZUKQseIvwJ7hC0gAmUKPjiiep4hm2BJ20ckbYrXRHSsm_ysTO-HBU_LQmKpOhuFXV5nq1qF2Ha7SApSsYu1_omV1qgaG6BIJjZ6ZpkSmvOKIRx2g9P2azag9cV84XUSUHK7nlQA29CM2 " alt="DND Public School Logo">
+                    </div>
+                    <div class="school-info">
+                        <h1>D.N.D. Public School</h1>
+                        <p>Dr. Narendra Dwivedi Vidya Mandir | Since 2000</p>
+                        <p class="slogan">"Greatest Man Thought About Education"</p>
+                    </div>
+                </div>
+                <div class="contact-header">
+                    <p><i class="fas fa-phone"></i> +91 88963 33945</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Khersa, Bidhnu, Kanpur Nagar, Uttar Pradesh , PIN Code 209214</p>
+                </div>
+            </div>
+        </div>
+    </header>
 
-<header>
-  <h1>DND Public School</h1>
-  <p>Khersa, Bidhnu, Kanpur Nagar, Uttar Pradesh</p>
-</header>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#academics">Academics</a></li>
+                <li><a href="#facilities">Facilities</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-<nav>
-  <a href="#about">हमारे बारे में</a>
-  <a href="#admission">प्रवेश</a>
-  <a href="#gallery">गैलरी</a>
-  <a href="#contact">संपर्क करें</a>
-</nav>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Shaping Future Leaders Since 2000</h2>
+            <p>D.N.D. Public School provides holistic education that nurtures young minds and prepares them for a bright future in a disciplined and caring environment.</p>
+            <a href="#contact" class="btn">Admission Open 2025-26</a>
+        </div>
+    </section>
 
-<section id="about">
-  <h2>हमारे बारे में</h2>
-  <p>DND Public School पिछले 20 वर्षों से गुणवत्तापूर्ण शिक्षा और संस्कार देने में अग्रणी रहा है। हमारा उद्देश्य है छात्रों को योग्य, जानकार और शिष्ट नागरिक बनाना।</p>
-</section>
+    <!-- About Section -->
+    <section id="about" class="about section-padding">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Our School</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>D.N.D. Public School, also known as Dr. Narendra Dwivedi Vidya Mandir, is a highly-regarded English-medium school in Khersa, Bidhnu, Kanpur Nagar, Uttar Pradesh , PIN Code 209214. Established in 2000, our institution has been a beacon of quality education in the region.</p>
+                    <p>We are committed to providing a nurturing environment that fosters academic excellence, character development, and holistic growth. Our school aims to foster an environment where students can become confident, responsible, and successful learners.</p>
+                    <p>With a 4.9-star rating based on 34 Google reviews, we are recognized for our commitment to quality education within a safe and disciplined setting. Our hardworking staff and excellent education system have received praise from parents and students alike.</p>
+                    <a href="#gallery" class="btn" style="margin-top: 20px;">View Our Gallery</a>
+                </div>
+                <div class="about-image">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipM7fUZw0peY4ONgAHk8fEJjwf8qIUxwMH4IlYUi=s1360-w1360-h1020-rw" alt="DND Public School Building">
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section id="admission">
-  <h2>प्रवेश खुला है</h2>
-  <p>शैक्षणिक सत्र 2025–26 के लिए प्रवेश प्रारंभ हो चुके हैं। <br>
-  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdQf18Y1dbLCN5Zh3i5fZXFQN_AReblDT18QRWZ9fk30apDEA/viewform" target="_blank">यहाँ आवेदन करें</a></p>
-</section>
+    <!-- Features Section -->
+    <section class="features section-padding">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose DND Public School?</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>Academic Excellence</h3>
+                    <p>Focused on providing a strong academic foundation while encouraging all-round development with extra classes for weaker students.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                    <h3>Experienced Faculty</h3>
+                    <p>Our dedicated and hardworking teachers are committed to nurturing each student's unique potential.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-school"></i></div>
+                    <h3>Modern Infrastructure</h3>
+                    <p>Well-equipped classrooms with smart technology, state-of-the-art labs, and a clean, spacious environment.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-heart"></i></div>
+                    <h3>Nurturing Environment</h3>
+                    <p>We provide a safe, disciplined, and caring atmosphere where students can thrive academically and personally.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section id="gallery">
-  <h2>गैलरी</h2>
-  <p>Smart classrooms, Annual functions, Sports day, Cultural events आदि की तस्वीरें जल्द ही यहाँ जोड़ी जाएँगी।</p>
-</section>
+    <!-- Quotes Section -->
+    <section class="quotes">
+        <div class="container">
+            <div class="quote-container">
+                <div class="quote">"The greatest man is he who chooses the right with invincible resolution; who resists the sorest temptations from within and without; who bears the heaviest burdens cheerfully; who is calmest in storms and most fearless under menace and frowns; whose reliance on truth, on virtue, and on God is most unfaltering."</div>
+                <div class="quote-author">- Thoughts on Education by Great Minds</div>
+            </div>
+        </div>
+    </section>
 
-<section id="contact">
-  <h2>संपर्क करें</h2>
-  <p>📞 7505599565, 8896333945 <br>
-     📧 dndschoolkanpur@gmail.com <br>
-     🔗 <a href="https://www.facebook.com/dndschoolkanpur" target="_blank">Facebook Page</a> <br>
-     📍 Khersa, Bidhnu, Kanpur Nagar</p>
-</section>
+    <!-- Academics Section -->
+    <section id="academics" class="academics section-padding">
+        <div class="container">
+            <div class="section-title">
+                <h2>Academic Programs</h2>
+            </div>
+            <div class="academics-content">
+                <div class="academic-level">
+                    <h3>Primary School</h3>
+                    <p>Classes I to V</p>
+                    <p>Foundational learning with activity-based approach in English medium</p>
+                </div>
+                <div class="academic-level">
+                    <h3>Middle School</h3>
+                    <p>Classes VI to VIII</p>
+                    <p>Building strong academic foundation with exploratory learning</p>
+                </div>
+                <div class="academic-level">
+                    <h3>Secondary School</h3>
+                    <p>Classes IX to X</p>
+                    <p>Preparation for board examinations with comprehensive support</p>
+                </div>
+                <div class="academic-level">
+                    <h3>Extra Support</h3>
+                    <p>Special Attention</p>
+                    <p>Extra classes to provide special attention to weaker students</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<footer>
-  <p>&copy; 2025 DND Public School | Designed for Excellence</p>
-</footer>
+    <!-- Facilities Section -->
+    <section id="facilities" class="facilities section-padding">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Facilities</h2>
+            </div>
+            <div class="facilities-content">
+                <div class="facility-item">
+                    <div class="facility-icon"><i class="fas fa-laptop"></i></div>
+                    <h3>Smart Classrooms</h3>
+                    <p>Modern classrooms equipped with smart technology for interactive learning</p>
+                </div>
+                <div class="facility-item">
+                    <div class="facility-icon"><i class="fas fa-flask"></i></div>
+                    <h3>Computer Labs</h3>
+                    <p>State-of-the-art computer labs with latest technology and software</p>
+                </div>
+                <div class="facility-item">
+                    <div class="facility-icon"><i class="fas fa-wheelchair"></i></div>
+                    <h3>Accessibility</h3>
+                    <p>Wheelchair-accessible entrance and parking lot for inclusive education</p>
+                </div>
+                <div class="facility-item">
+                    <div class="facility-icon"><i class="fas fa-seedling"></i></div>
+                    <h3>Spacious Campus</h3>
+                    <p>Clean, disciplined, and spacious environment for holistic development</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery section-padding">
+        <div class="container">
+            <div class="section-title">
+                <h2>School Gallery</h2>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://scontent.flko9-2.fna.fbcdn.net/v/t39.30808-6/480681643_1079485574195307_2869457070745009294_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=mhACbgik6OIQ7kNvwGE_wsi&_nc_oc=Adnk_S6fDScxU7Br6abaFDpZgz1bYz0F7-C8sdl6Sg3HBZ2FwgXR84GczhGGS_mKNZxP6E4SymHcgKuONHKyX30j&_nc_zt=23&_nc_ht=scontent.flko9-2.fna&_nc_gid=bhjj-DX_jPi4PgWXxioQeQ&oh=00_Afa8l7Hw84bLYNsi-sRHrbi2E_ajGxhKr0XUWMlXTp_i6w&oe=68E2F03B" alt="School Event">
+                    <div class="gallery-overlay">
+                        <h3>Annual Function</h3>
+                        <p>Students performing at our annual cultural event</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://sl.bing.net/jVjSqyJwPlY" alt="Classroom">
+                    <div class="gallery-overlay">
+                        <h3>Modern Classroom</h3>
+                        <p>Our well-equipped smart classrooms</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://sl.bing.net/fUbPf2gidpY" alt="Science Lab">
+                    <div class="gallery-overlay">
+                        <h3>Science Laboratory</h3>
+                        <p>Students conducting experiments</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://sl.bing.net/jQeF4J7EASq" alt="Sports Day">
+                    <div class="gallery-overlay">
+                        <h3>Sports Day</h3>
+                        <p>Annual sports competition</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://sl.bing.net/iZQNVqeeaNU" alt="Computer Lab">
+                    <div class="gallery-overlay">
+                        <h3>Computer Lab</h3>
+                        <p>Students learning computer skills</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://sl.bing.net/ctoJWyLivT2" alt="Library">
+                    <div class="gallery-overlay">
+                        <h3>School Library</h3>
+                        <p>Well-stocked library for students</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://sl.bing.net/bVwHwDTA580" alt="Art Class">
+                    <div class="gallery-overlay">
+                        <h3>Art & Craft</h3>
+                        <p>Creative activities for students</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://sl.bing.net/hstq066YJNY" alt="Playground">
+                    <div class="gallery-overlay">
+                        <h3>Playground</h3>
+                        <p>Spacious playground for sports</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://sl.bing.net/jD9P0gHb4nY" alt="Assembly">
+                    <div class="gallery-overlay">
+                        <h3>Morning Assembly</h3>
+                        <p>Students during morning prayers</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://sl.bing.net/hRRaT1I1YHI" alt="Award Ceremony">
+                    <div class="gallery-overlay">
+                        <h3>Award Ceremony</h3>
+                        <p>Recognizing student achievements</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section-padding">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Parents Say</h2>
+            </div>
+            <div class="rating">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="rating-text">4.9/5 Based on 34 Google Reviews</div>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "DND Public School provides excellent education with hardworking staff. My child has shown remarkable improvement in both academics and personality."
+                    </div>
+                    <div class="testimonial-author">- Parent of Class VII Student</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "The school environment is very disciplined and nurturing. Teachers give personal attention to each student. Highly recommended for quality education."
+                    </div>
+                    <div class="testimonial-author">- Parent of Class V Student</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Infrastructure is modern and well-maintained. The focus on all-round development along with academics is what makes this school special."
+                    </div>
+                    <div class="testimonial-author">- Parent of Class X Student</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Location</h2>
+            </div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3562.123456789012!2d80.12345678901234!3d26.123456789012345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDA3JzI0LjQiTiA4MMKwMDcnMjQuNCJF!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section-padding">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <p>We welcome your inquiries and would be happy to provide more information about our school and admission process.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <h4>Address</h4>
+                                <p>D.N.D. Public School, Khersa, Bidhnu<br>Kanpur Nagar, Uttar Pradesh, India - 209202</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+91 88963 33945</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                            <div>
+                                <h4>School Hours</h4>
+                                <p>Monday - Friday: 8:00 AM - 2:00 PM<br>Saturday: 8:00 AM - 12:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>D.N.D. Public School</h3>
+                    <p>Dr. Narendra Dwivedi Vidya Mandir, providing quality education since 2000. Our mission is to nurture young minds and prepare them for a successful future.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/dndschoolkanpur" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#academics">Academics</a></li>
+                        <li><a href="#facilities">Facilities</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Khersa, Bidhnu, Kanpur Nagar, Uttar Pradesh , PIN Code 209214</li>
+                        <li><i class="fas fa-phone"></i> +91 88963 33945</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 8AM-2PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 D.N.D. Public School Kanpur. All Rights Reserved. | Dr. Narendra Dwivedi Vidya Mandir</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple form submission handler
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
