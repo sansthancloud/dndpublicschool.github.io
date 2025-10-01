@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="DND Public School, Khersa Bidhnu Kanpur - Best CBSE School for Quality Education">
+  <title>DND Public School | Khersa Bidhnu, Kanpur</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
+    header { background: #2c3e50; color: white; padding: 20px; text-align: center; }
+    nav { background: #34495e; padding: 10px; text-align: center; }
+    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+    section { padding: 20px; }
+    footer { background: #2c3e50; color: white; text-align: center; padding: 10px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>DND Public School</h1>
+  <p>Khersa, Bidhnu, Kanpur Nagar, Uttar Pradesh</p>
+</header>
+
+<nav>
+  <a href="#about">हमारे बारे में</a>
+  <a href="#admission">प्रवेश</a>
+  <a href="#gallery">गैलरी</a>
+  <a href="#contact">संपर्क करें</a>
+</nav>
+
+<section id="about">
+  <h2>हमारे बारे में</h2>
+  <p>DND Public School पिछले 20 वर्षों से गुणवत्तापूर्ण शिक्षा और संस्कार देने में अग्रणी रहा है। हमारा उद्देश्य है छात्रों को योग्य, जानकार और शिष्ट नागरिक बनाना।</p>
+</section>
+
+<section id="admission">
+  <h2>प्रवेश खुला है</h2>
+  <p>शैक्षणिक सत्र 2025–26 के लिए प्रवेश प्रारंभ हो चुके हैं। <br>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdQf18Y1dbLCN5Zh3i5fZXFQN_AReblDT18QRWZ9fk30apDEA/viewform" target="_blank">यहाँ आवेदन करें</a></p>
+</section>
+
+<section id="gallery">
+  <h2>गैलरी</h2>
+  <p>Smart classrooms, Annual functions, Sports day, Cultural events आदि की तस्वीरें जल्द ही यहाँ जोड़ी जाएँगी।</p>
+</section>
+
+<section id="contact">
+  <h2>संपर्क करें</h2>
+  <p>📞 7505599565, 8896333945 <br>
+     📧 dndschoolkanpur@gmail.com <br>
+     🔗 <a href="https://www.facebook.com/dndschoolkanpur" target="_blank">Facebook Page</a> <br>
+     📍 Khersa, Bidhnu, Kanpur Nagar</p>
+</section>
+
+<footer>
+  <p>&copy; 2025 DND Public School | Designed for Excellence</p>
+</footer>
+
+</body>
+</html>
