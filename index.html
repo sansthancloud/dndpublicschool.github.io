@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DND Public School Kanpur - Dr. Narendra Dwivedi Vidya Mandir</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Base Styles */
         * {
             margin: 0;
             padding: 0;
@@ -15,16 +14,17 @@
         }
         
         :root {
-            --primary: #1e5799;
-            --secondary: #ff9800;
-            --accent: #0d3c6c;
-            --light: #f0f5ff;
-            --dark: #333;
+            --primary: #800020;
+            --secondary: #D4AF37;
+            --accent: #5E1914;
+            --light: #FFF5F5;
+            --dark: #2C0703;
+            --text: #333333;
         }
         
         body {
             line-height: 1.6;
-            color: var(--dark);
+            color: var(--text);
             background-color: #f9f9f9;
             scroll-behavior: smooth;
         }
@@ -76,12 +76,6 @@
             border: 2px solid var(--secondary);
         }
         
-        .logo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
         .logo-placeholder {
             width: 100%;
             height: 100%;
@@ -110,7 +104,7 @@
             font-style: italic;
             margin-top: 5px;
             font-size: 0.9rem;
-            color: #ffeb3b;
+            color: var(--secondary);
         }
         
         /* Navigation */
@@ -121,6 +115,7 @@
         nav ul {
             display: flex;
             list-style: none;
+            flex-wrap: wrap;
         }
         
         nav li {
@@ -136,13 +131,13 @@
             font-weight: 500;
         }
         
-        nav a:hover {
+        nav a:hover, nav a.active {
             background-color: var(--primary);
         }
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://lh3.googleusercontent.com/p/AF1QipM7fUZw0peY4ONgAHk8fEJjwf8qIUxwMH4IlYUi=s1360-w1360-h1020-rw') no-repeat center center/cover;
+            background: linear-gradient(rgba(128, 0, 32, 0.7), rgba(94, 25, 20, 0.7)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
             height: 500px;
             display: flex;
             align-items: center;
@@ -170,7 +165,7 @@
         .btn {
             display: inline-block;
             background: var(--secondary);
-            color: white;
+            color: var(--dark);
             padding: 12px 30px;
             border-radius: 5px;
             text-decoration: none;
@@ -178,12 +173,22 @@
             transition: all 0.3s;
             border: none;
             cursor: pointer;
+            margin: 5px;
         }
         
         .btn:hover {
-            background: #e68900;
+            background: #b8941f;
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .btn-maroon {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .btn-maroon:hover {
+            background: #6a001b;
         }
         
         /* Sections */
@@ -257,6 +262,7 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
             text-align: center;
             transition: transform 0.3s;
+            border-top: 4px solid var(--secondary);
         }
         
         .feature-card:hover {
@@ -312,12 +318,84 @@
             border-radius: 8px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
             text-align: center;
+            border-top: 4px solid var(--secondary);
         }
         
         .facility-icon {
             font-size: 2.5rem;
             color: var(--primary);
             margin-bottom: 15px;
+        }
+        
+        /* Forms Section */
+        .forms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .form-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            border-top: 4px solid var(--secondary);
+        }
+        
+        .form-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .form-header {
+            background: var(--primary);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .form-header i {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .form-body {
+            padding: 25px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--primary);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border 0.3s;
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary);
+            outline: none;
+        }
+        
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .form-footer {
+            padding: 15px 25px 25px;
+            text-align: center;
         }
         
         /* Photo Gallery */
@@ -338,6 +416,7 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             height: 250px;
             transition: transform 0.3s;
+            background-color: var(--light);
         }
         
         .gallery-item:hover {
@@ -360,7 +439,7 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: rgba(0,0,0,0.7);
+            background: rgba(128, 0, 32, 0.8);
             color: white;
             padding: 15px;
             transform: translateY(100%);
@@ -408,6 +487,7 @@
             border-radius: 8px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
             text-align: left;
+            border-left: 4px solid var(--secondary);
         }
         
         .testimonial-text {
@@ -487,29 +567,6 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
         
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-        }
-        
-        .form-control {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
-        
-        textarea.form-control {
-            min-height: 150px;
-            resize: vertical;
-        }
-        
         /* Map Section */
         .map-section {
             background-color: var(--light);
@@ -527,6 +584,31 @@
             width: 100%;
             height: 100%;
             border: none;
+        }
+        
+        /* WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px rgba(0,0,0,0.2);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+        
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
         }
         
         /* Footer */
@@ -638,18 +720,34 @@
             .gallery-grid {
                 grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             }
+            
+            .forms-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+                font-size: 25px;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/918896333945" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <!-- Header Section -->
     <header>
         <div class="container">
             <div class="header-content">
                 <div class="logo-container">
                     <div class="logo">
-                        <!-- Logo placeholder - replace with actual logo -->
-                        <img src="https://blogger.googleusercontent.com/img/a/AVvXsEgYjnhDtbhQh8HPcppUX141NtCOaguBukmYv5CkRM1a8f-1cjBDZUKQseIvwJ7hC0gAmUKPjiiep4hm2BJ20ckbYrXRHSsm_ysTO-HBU_LQmKpOhuFXV5nq1qF2Ha7SApSsYu1_omV1qgaG6BIJjZ6ZpkSmvOKIRx2g9P2azag9cV84XUSUHK7nlQA29CM2 " alt="DND Public School Logo">
+                        <div class="logo-placeholder">DND<br>School</div>
                     </div>
                     <div class="school-info">
                         <h1>D.N.D. Public School</h1>
@@ -658,9 +756,8 @@
                     </div>
                 </div>
                 <div class="contact-header">
-                      <p1><i class="fas fa-phone"></i> +91 75055 99565</p1>
-                    <p2><i class="fas fa-phone"></i> +91 88963 33945</p2>
-                    <p><i class="fas fa-map-marker-alt"></i> Khersa, Bidhnu, Kanpur Nagar, Uttar Pradesh , PIN Code 209214</p>
+                    <p><i class="fas fa-phone"></i> +91 75055 99565 | +91 88963 33945</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Khersa, Bidhnu, Kanpur Nagar, Uttar Pradesh, PIN Code 209214</p>
                 </div>
             </div>
         </div>
@@ -670,10 +767,11 @@
     <nav>
         <div class="container">
             <ul>
-                <li><a href="#home">Home</a></li>
+                <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#academics">Academics</a></li>
                 <li><a href="#facilities">Facilities</a></li>
+                <li><a href="#forms">Forms</a></li>
                 <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -686,7 +784,8 @@
         <div class="hero-content">
             <h2>Shaping Future Leaders Since 2000</h2>
             <p>D.N.D. Public School provides holistic education that nurtures young minds and prepares them for a bright future in a disciplined and caring environment.</p>
-            <a href="#contact" class="btn">Admission Open 2025-26</a>
+            <a href="#forms" class="btn">Admission Open 2025-26</a>
+            <a href="#contact" class="btn btn-maroon">Contact Us</a>
         </div>
     </section>
 
@@ -698,13 +797,13 @@
             </div>
             <div class="about-content">
                 <div class="about-text">
-                    <p>D.N.D. Public School, also known as Dr. Narendra Dwivedi Vidya Mandir, is a highly-regarded English-medium school in Khersa, Bidhnu, Kanpur Nagar, Uttar Pradesh , PIN Code 209214. Established in 2000, our institution has been a beacon of quality education in the region.</p>
+                    <p>D.N.D. Public School, also known as Dr. Narendra Dwivedi Vidya Mandir, is a highly-regarded English-medium school in Khersa, Bidhnu, Kanpur Nagar, Uttar Pradesh, PIN Code 209214. Established in 2000, our institution has been a beacon of quality education in the region.</p>
                     <p>We are committed to providing a nurturing environment that fosters academic excellence, character development, and holistic growth. Our school aims to foster an environment where students can become confident, responsible, and successful learners.</p>
                     <p>With a 4.9-star rating based on 34 Google reviews, we are recognized for our commitment to quality education within a safe and disciplined setting. Our hardworking staff and excellent education system have received praise from parents and students alike.</p>
                     <a href="#gallery" class="btn" style="margin-top: 20px;">View Our Gallery</a>
                 </div>
                 <div class="about-image">
-                    <img src="https://lh3.googleusercontent.com/p/AF1QipM7fUZw0peY4ONgAHk8fEJjwf8qIUxwMH4IlYUi=s1360-w1360-h1020-rw" alt="DND Public School Building">
+                    <img src="https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="DND Public School Building">
                 </div>
             </div>
         </div>
@@ -759,23 +858,19 @@
             </div>
             <div class="academics-content">
                 <div class="academic-level">
-                    <h3>Primary School</h3>
-                    <p>Classes I to V</p>
+                    <h3>Primary Education</h3>
                     <p>Foundational learning with activity-based approach in English medium</p>
                 </div>
                 <div class="academic-level">
-                    <h3>Middle School</h3>
-                    <p>Classes VI to VIII</p>
+                    <h3>Holistic Development</h3>
                     <p>Building strong academic foundation with exploratory learning</p>
                 </div>
                 <div class="academic-level">
-                    <h3>Secondary School</h3>
-                    <p>Classes IX to X</p>
-                    <p>Preparation for board examinations with comprehensive support</p>
+                    <h3>Comprehensive Support</h3>
+                    <p>Preparation for academic excellence with comprehensive support</p>
                 </div>
                 <div class="academic-level">
                     <h3>Extra Support</h3>
-                    <p>Special Attention</p>
                     <p>Extra classes to provide special attention to weaker students</p>
                 </div>
             </div>
@@ -813,6 +908,165 @@
         </div>
     </section>
 
+    <!-- Forms Section -->
+    <section id="forms" class="forms section-padding">
+        <div class="container">
+            <div class="section-title">
+                <h2>School Forms & Applications</h2>
+                <p>Access all necessary forms for admission, transportation, events and more</p>
+            </div>
+            
+            <div class="forms-grid">
+                <!-- Admission Form -->
+                <div class="form-card">
+                    <div class="form-header">
+                        <i class="fas fa-user-graduate"></i>
+                        <h3>Admission Form</h3>
+                    </div>
+                    <div class="form-body">
+                        <div class="form-group">
+                            <label for="admission-student-name">Student Name</label>
+                            <input type="text" id="admission-student-name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="admission-dob">Date of Birth</label>
+                            <input type="date" id="admission-dob" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="admission-class">Class Applying For</label>
+                            <select id="admission-class" class="form-control" required>
+                                <option value="">Select Class</option>
+                                <option value="nursery">Nursery</option>
+                                <option value="kg">KG</option>
+                                <option value="1">Class 1</option>
+                                <option value="2">Class 2</option>
+                                <option value="3">Class 3</option>
+                                <option value="4">Class 4</option>
+                                <option value="5">Class 5</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="admission-previous-school">Previous School (if any)</label>
+                            <input type="text" id="admission-previous-school" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-footer">
+                        <button class="btn btn-maroon" onclick="submitAdmissionForm()">Submit Admission Form</button>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="form-card">
+                    <div class="form-header">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Contact/Inquiry Form</h3>
+                    </div>
+                    <div class="form-body">
+                        <div class="form-group">
+                            <label for="contact-name">Your Name</label>
+                            <input type="text" id="contact-name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">Email Address</label>
+                            <input type="email" id="contact-email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-phone">Phone Number</label>
+                            <input type="tel" id="contact-phone" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-subject">Subject</label>
+                            <input type="text" id="contact-subject" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-message">Message</label>
+                            <textarea id="contact-message" class="form-control" required></textarea>
+                        </div>
+                    </div>
+                    <div class="form-footer">
+                        <button class="btn btn-maroon" onclick="submitContactForm()">Send Inquiry</button>
+                    </div>
+                </div>
+
+                <!-- Fee Payment Form -->
+                <div class="form-card">
+                    <div class="form-header">
+                        <i class="fas fa-money-bill-wave"></i>
+                        <h3>Fee Payment Form</h3>
+                    </div>
+                    <div class="form-body">
+                        <div class="form-group">
+                            <label for="fee-student-id">Student ID</label>
+                            <input type="text" id="fee-student-id" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="fee-student-name">Student Name</label>
+                            <input type="text" id="fee-student-name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="fee-class">Class</label>
+                            <select id="fee-class" class="form-control" required>
+                                <option value="">Select Class</option>
+                                <option value="nursery">Nursery</option>
+                                <option value="kg">KG</option>
+                                <option value="1">Class 1</option>
+                                <option value="2">Class 2</option>
+                                <option value="3">Class 3</option>
+                                <option value="4">Class 4</option>
+                                <option value="5">Class 5</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="fee-amount">Amount (₹)</label>
+                            <input type="number" id="fee-amount" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="form-footer">
+                        <button class="btn btn-maroon" onclick="submitFeeForm()">Proceed to Payment</button>
+                    </div>
+                </div>
+
+                <!-- Parent-Teacher Meeting Form -->
+                <div class="form-card">
+                    <div class="form-header">
+                        <i class="fas fa-handshake"></i>
+                        <h3>Parent-Teacher Meeting</h3>
+                    </div>
+                    <div class="form-body">
+                        <div class="form-group">
+                            <label for="ptm-student-name">Student Name</label>
+                            <input type="text" id="ptm-student-name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="ptm-class">Class</label>
+                            <select id="ptm-class" class="form-control" required>
+                                <option value="">Select Class</option>
+                                <option value="nursery">Nursery</option>
+                                <option value="kg">KG</option>
+                                <option value="1">Class 1</option>
+                                <option value="2">Class 2</option>
+                                <option value="3">Class 3</option>
+                                <option value="4">Class 4</option>
+                                <option value="5">Class 5</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="ptm-date">Preferred Date</label>
+                            <input type="date" id="ptm-date" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="ptm-concern">Discussion Points/Concerns</label>
+                            <textarea id="ptm-concern" class="form-control" required></textarea>
+                        </div>
+                    </div>
+                    <div class="form-footer">
+                        <button class="btn btn-maroon" onclick="submitPTMForm()">Schedule Meeting</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Gallery Section -->
     <section id="gallery" class="gallery section-padding">
         <div class="container">
@@ -821,73 +1075,31 @@
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="https://scontent.flko9-2.fna.fbcdn.net/v/t39.30808-6/480681643_1079485574195307_2869457070745009294_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=mhACbgik6OIQ7kNvwGE_wsi&_nc_oc=Adnk_S6fDScxU7Br6abaFDpZgz1bYz0F7-C8sdl6Sg3HBZ2FwgXR84GczhGGS_mKNZxP6E4SymHcgKuONHKyX30j&_nc_zt=23&_nc_ht=scontent.flko9-2.fna&_nc_gid=bhjj-DX_jPi4PgWXxioQeQ&oh=00_Afa8l7Hw84bLYNsi-sRHrbi2E_ajGxhKr0XUWMlXTp_i6w&oe=68E2F03B" alt="School Event">
+                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="School Event">
                     <div class="gallery-overlay">
                         <h3>Annual Function</h3>
                         <p>Students performing at our annual cultural event</p>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src=" https://tse2.mm.bing.net/th/id/OIP.YoyO2UP93RFg-bAWY7DFDAHaFj?rs=1&pid=ImgDetMain&o=7&rm=3 " alt="Classroom">
+                    <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Classroom">
                     <div class="gallery-overlay">
                         <h3>Modern Classroom</h3>
                         <p>Our well-equipped smart classrooms</p>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://sl.bing.net/fUbPf2gidpY" alt="Science Lab">
+                    <img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Science Lab">
                     <div class="gallery-overlay">
                         <h3>Science Laboratory</h3>
                         <p>Students conducting experiments</p>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://sl.bing.net/jQeF4J7EASq" alt="Sports Day">
+                    <img src="https://images.unsplash.com/photo-1543321266-59463f3e8c6d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Sports Day">
                     <div class="gallery-overlay">
                         <h3>Sports Day</h3>
                         <p>Annual sports competition</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://sl.bing.net/iZQNVqeeaNU" alt="Computer Lab">
-                    <div class="gallery-overlay">
-                        <h3>Computer Lab</h3>
-                        <p>Students learning computer skills</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://sl.bing.net/ctoJWyLivT2" alt="Library">
-                    <div class="gallery-overlay">
-                        <h3>School Library</h3>
-                        <p>Well-stocked library for students</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://sl.bing.net/bVwHwDTA580" alt="Art Class">
-                    <div class="gallery-overlay">
-                        <h3>Art & Craft</h3>
-                        <p>Creative activities for students</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://sl.bing.net/hstq066YJNY" alt="Playground">
-                    <div class="gallery-overlay">
-                        <h3>Playground</h3>
-                        <p>Spacious playground for sports</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://sl.bing.net/jD9P0gHb4nY" alt="Assembly">
-                    <div class="gallery-overlay">
-                        <h3>Morning Assembly</h3>
-                        <p>Students during morning prayers</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://sl.bing.net/hRRaT1I1YHI" alt="Award Ceremony">
-                    <div class="gallery-overlay">
-                        <h3>Award Ceremony</h3>
-                        <p>Recognizing student achievements</p>
                     </div>
                 </div>
             </div>
@@ -915,19 +1127,19 @@
                     <div class="testimonial-text">
                         "DND Public School provides excellent education with hardworking staff. My child has shown remarkable improvement in both academics and personality."
                     </div>
-                    <div class="testimonial-author">- Parent of Class III Student</div>
+                    <div class="testimonial-author">- Parent of Student</div>
                 </div>
                 <div class="testimonial-card">
                     <div class="testimonial-text">
                         "The school environment is very disciplined and nurturing. Teachers give personal attention to each student. Highly recommended for quality education."
                     </div>
-                    <div class="testimonial-author">- Parent of Class V Student</div>
+                    <div class="testimonial-author">- Parent of Student</div>
                 </div>
                 <div class="testimonial-card">
                     <div class="testimonial-text">
                         "Infrastructure is modern and well-maintained. The focus on all-round development along with academics is what makes this school special."
                     </div>
-                    <div class="testimonial-author">- Parent of Class IV Student</div>
+                    <div class="testimonial-author">- Parent of Student</div>
                 </div>
             </div>
         </div>
@@ -940,7 +1152,7 @@
                 <h2>Our Location</h2>
             </div>
             <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3562.123456789012!2d80.12345678901234!3d26.123456789012345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDA3JzI0LjQiTiA4MMKwMDcnMjQuNCJF!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3562.123456789012!2d80.2741649!3d26.3196173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399c4f80de8d631f%3A0x313ed294e9cb76eb!2sD.N.D.%20PUBLIC%20SCHOOL!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </section>
@@ -960,7 +1172,7 @@
                             <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
                             <div>
                                 <h4>Address</h4>
-                                <p>D.N.D. Public School, Khersa, Bidhnu<br>Kanpur Nagar, Uttar Pradesh, India - 209202</p>
+                                <p>D.N.D. Public School, Khersa, Bidhnu<br>Kanpur Nagar, Uttar Pradesh, India - 209214</p>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -974,14 +1186,14 @@
                             <div class="contact-icon"><i class="fas fa-clock"></i></div>
                             <div>
                                 <h4>School Hours</h4>
-                                <p>Monday - Friday: 8:00 AM - 2:00 PM<br>Saturday: 8:00 AM - 2:00 PM PM</p>
+                                <p>Monday - Friday: 8:00 AM - 2:00 PM<br>Saturday: 8:00 AM - 12:00 PM</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="contact-form">
                     <h3>Send Us a Message</h3>
-                    <form>
+                    <form id="main-contact-form">
                         <div class="form-group">
                             <label for="name">Full Name</label>
                             <input type="text" id="name" class="form-control" required>
@@ -998,7 +1210,7 @@
                             <label for="message">Message</label>
                             <textarea id="message" class="form-control" required></textarea>
                         </div>
-                        <button type="submit" class="btn">Send Message</button>
+                        <button type="button" class="btn btn-maroon" onclick="submitMainContactForm()">Send Message</button>
                     </form>
                 </div>
             </div>
@@ -1026,13 +1238,13 @@
                         <li><a href="#about">About Us</a></li>
                         <li><a href="#academics">Academics</a></li>
                         <li><a href="#facilities">Facilities</a></li>
-                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#forms">Forms</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h3>Contact Info</h3>
                     <ul class="footer-links">
-                        <li><i class="fas fa-map-marker-alt"></i> Khersa, Bidhnu, Kanpur Nagar, Uttar Pradesh , PIN Code 209214</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Khersa, Bidhnu, Kanpur Nagar, Uttar Pradesh, PIN Code 209214</li>
                         <li><i class="fas fa-phone"></i> +91 88963 33945</li>
                         <li><i class="fas fa-clock"></i> Mon-Fri: 8AM-2PM</li>
                     </ul>
@@ -1045,12 +1257,98 @@
     </footer>
 
     <script>
-        // Simple form submission handler
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message! We will get back to you soon.');
-            this.reset();
-        });
+        // Google Apps Script URL for form submissions
+        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxh-ehefFwmmhYZpVMhFp1yuG63DFm_QeVhGD0VIg_STZVnalSiHdR8en-lrJRYBI2nMg/exec';
+        
+        // Form submission functions
+        function submitAdmissionForm() {
+            const formData = {
+                type: 'Admission',
+                studentName: document.getElementById('admission-student-name').value,
+                dob: document.getElementById('admission-dob').value,
+                class: document.getElementById('admission-class').value,
+                previousSchool: document.getElementById('admission-previous-school').value,
+                timestamp: new Date().toLocaleString()
+            };
+            
+            submitToGoogleSheets(formData);
+        }
+        
+        function submitContactForm() {
+            const formData = {
+                type: 'Contact',
+                name: document.getElementById('contact-name').value,
+                email: document.getElementById('contact-email').value,
+                phone: document.getElementById('contact-phone').value,
+                subject: document.getElementById('contact-subject').value,
+                message: document.getElementById('contact-message').value,
+                timestamp: new Date().toLocaleString()
+            };
+            
+            submitToGoogleSheets(formData);
+        }
+        
+        function submitFeeForm() {
+            const formData = {
+                type: 'Fee Payment',
+                studentId: document.getElementById('fee-student-id').value,
+                studentName: document.getElementById('fee-student-name').value,
+                class: document.getElementById('fee-class').value,
+                amount: document.getElementById('fee-amount').value,
+                timestamp: new Date().toLocaleString()
+            };
+            
+            submitToGoogleSheets(formData);
+        }
+        
+        function submitPTMForm() {
+            const formData = {
+                type: 'Parent-Teacher Meeting',
+                studentName: document.getElementById('ptm-student-name').value,
+                class: document.getElementById('ptm-class').value,
+                date: document.getElementById('ptm-date').value,
+                concern: document.getElementById('ptm-concern').value,
+                timestamp: new Date().toLocaleString()
+            };
+            
+            submitToGoogleSheets(formData);
+        }
+        
+        function submitMainContactForm() {
+            const formData = {
+                type: 'Main Contact',
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                message: document.getElementById('message').value,
+                timestamp: new Date().toLocaleString()
+            };
+            
+            submitToGoogleSheets(formData);
+        }
+        
+        // Function to submit data to Google Sheets
+        function submitToGoogleSheets(formData) {
+            fetch(SCRIPT_URL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert('Form submitted successfully! We will contact you soon.');
+                // Clear form fields
+                document.querySelectorAll('.form-control').forEach(input => {
+                    if (input.type !== 'submit') input.value = '';
+                });
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('There was an error submitting the form. Please try again or contact us directly.');
+            });
+        }
         
         // Smooth scrolling for navigation links
         document.querySelectorAll('nav a').forEach(anchor => {
@@ -1062,9 +1360,35 @@
                     top: targetElement.offsetTop - 80,
                     behavior: 'smooth'
                 });
+                
+                // Update active nav link
+                document.querySelectorAll('nav a').forEach(link => {
+                    link.classList.remove('active');
+                });
+                this.classList.add('active');
+            });
+        });
+        
+        // Highlight active section in navigation
+        window.addEventListener('scroll', function() {
+            let current = '';
+            const sections = document.querySelectorAll('section');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 100)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            document.querySelectorAll('nav a').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
             });
         });
     </script>
 </body>
 </html>
-
